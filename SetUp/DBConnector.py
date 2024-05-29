@@ -1,10 +1,11 @@
 from config import *
 
+
 # Establish a new database connection
 import mysql.connector;
 
 mydb = mysql.connector.connect(
-  host="localhost",
+  host=host_name,
   user= DBuser,
   password= DBpassword,
   database=myDatabase
@@ -12,4 +13,3 @@ mydb = mysql.connector.connect(
 
 # Use database connection
 dbcursor = mydb.cursor()
-

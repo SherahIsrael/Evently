@@ -1,16 +1,18 @@
 from DBConnector import *
 
-eventsTable = "CREATE TABLE IF NOT EXISTS events (id INT AUTO_INCREMENT PRIMARY KEY, eventName VARCHAR(50) NOT NULL, date DATE NOT NULL, StartTime TIME(0) NOT NULL, EndTime TIME(0) NOT NULL, capacity SMALLINT(250))"
+dbcursor.execute("DROP TABLE IF EXISTS events")
+
+eventsTable = "CREATE TABLE IF NOT EXISTS events (eventsId INT AUTO_INCREMENT PRIMARY KEY, eventName VARCHAR(50) NOT NULL, date DATE NOT NULL, StartTime TIME(0) NOT NULL, EndTime TIME(0) NOT NULL, capacity SMALLINT(250))"
 
 dbcursor.execute(eventsTable)
 
-insert_events = "INSERT INTO events (eventName, date, StartTime, EndTime, capacity) VALUES (%s, %s, %s, %s, %s)"
+insert_events = "INSERT INTO events (eventName, date, StartTime, EndTime, capacity) VALUES (%s,%s,%s,%s,%s)"
 
 # List of tuples containing values to insert
 event_values = [
-  ("Coding Fundamentals", "2024-06-19", "17:00:00", "21:00:00", 200),
-  ("New Mothers Brunch", "2024-05-30", "10:30:00", "13:00:00", 25), 
-  ("Meet the cast of Shrek", "2024-06-22", "09:00:00", "20:00:00", 250),
+  ('Coding Fundamentals', '2024-06-19', '17:00:00', '21:00:00', 200),
+  ('New Mothers Brunch', '2024-05-30', '10:30:00', '13:00:00', 25), 
+  ('Meet the cast of Shrek', '2024-06-22', '09:00:00', '20:00:00', 250),
   ('Urban Hikers Club', '2024-11-28', '9:20:02', '14:11:52', 39),
   ('Wine Tasting', '2024-07-30', '16:02:13', '18:04:59', 27),
   ('Python Programmers Meetup', '2024-08-02', '13:17:01', '20:59:42', 22),
@@ -1016,7 +1018,18 @@ event_values = [
 # Insert all rows in one call
 dbcursor.executemany(insert_events, event_values)  
 
-dbcursor.execute("SHOW TABLES")
 
-for x in dbcursor:
-  print(x)
+
+mydb.commit()
+
+dbcursor.execute("SELECT * FROM events") 
+  
+# fetch all the matching rows  
+result = dbcursor.fetchall() 
+  
+# loop through the rows 
+for row in result: 
+    print(row) 
+    print("\n") 
+
+mydb.close()
