@@ -74,6 +74,7 @@ WSGI_APPLICATION = 'evently.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
+# Used decouple to hide information
 
 DB_NAME = config('DB_NAME')
 DB_USER = config('DB_USER')
