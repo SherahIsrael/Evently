@@ -19,3 +19,7 @@ def details(request, id):
     'allusers': allusers,
   }
   return HttpResponse(template.render(context, request))
+
+def home(request):
+  template = loader.get_template('home.html')
+  return HttpResponse(template.render())
