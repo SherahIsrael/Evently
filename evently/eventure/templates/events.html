@@ -1,0 +1,19 @@
+{% extends "master.html" %}
+
+{% block title %}
+  List of all events
+{% endblock %}
+
+{% block content %}
+
+    <p><a href="/">HOME</a></p>
+
+    <h1>Events</h1>
+  
+<ul>
+  {% for x in allevents %}
+    <li><a href="details/{{ x.id }}">{{ x.eventName }} {{ x.lastName }} </li>
+  {% endfor %}
+</ul>
+
+{% endblock %}
