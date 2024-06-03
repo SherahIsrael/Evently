@@ -1,11 +1,19 @@
-#NavBar ul {
+body {
+  background-color: white;
+  color: black;
+}
+
+/* Landing Page */
+
+/* NavBar */
+#NavBar ul, .dateSearch ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
 
-#NavBar li {
+#NavBar li, .dateSearch li {
   float: left;
 }
 
@@ -17,14 +25,40 @@
   color: black;
 }
 
-/* Change the link color to #111 (black) on hover */
 #NavBar li a:hover {
   background-color: purple;
-  text-emphasis: bold;
+  text-transform: uppercase;
 }
 
-body {
-  background-color: aliceblue;
-  color: black;
+.landing {
+  position: relative;
 }
 
+.events {
+  border-style: double;
+  border-radius: 2%;
+  border-width: 5in;
+}
+
+.landing img {
+  display: block;
+  width: 85%;
+  margin: auto;
+  padding-top: 10px;
+}
+
+.dateSearch {
+  position: absolute;
+  bottom: 8px;
+  right: 20%;
+  margin: auto;
+  font-size: 18px;
+  background-color: white;
+  padding: 10px;
+  border: 3px solid green;
+  border-radius: 20px;
+}
+
+.dateSearch li a {
+  padding: 5px;
+}
