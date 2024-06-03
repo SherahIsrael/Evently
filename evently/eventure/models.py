@@ -7,6 +7,9 @@ class usersTable(models.Model):
   dateOfBirth = models.DateField()
   registrationDate = models.DateField() 
   
+  def __str__(self):
+    return f"{self.firstName} {self.lastName}"
+  
 class eventsTable(models.Model):
   eventName = models.CharField(max_length=100, null=False)
   eventDate = models.DateField(null=False)
@@ -14,6 +17,9 @@ class eventsTable(models.Model):
   EndTime = models.TimeField(auto_now=False, auto_now_add=False, null=False)
   attendees = models.ManyToManyField(usersTable, blank=True)
   capacity = models.IntegerField()
+  
+  def __str__(self):
+    return f"{self.eventName}"
   
 # class registrationTable(models.Model):
 #   event = models.ForeignKey(eventsTable, blank=True, on_delete=models.CASCADE)

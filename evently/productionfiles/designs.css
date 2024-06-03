@@ -1,0 +1,30 @@
+#NavBar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#NavBar li {
+  float: left;
+}
+
+#NavBar li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: black;
+}
+
+/* Change the link color to #111 (black) on hover */
+#NavBar li a:hover {
+  background-color: purple;
+  text-emphasis: bold;
+}
+
+body {
+  background-color: aliceblue;
+  color: black;
+}
+
