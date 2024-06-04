@@ -42,7 +42,7 @@ body {
 
 .landing img {
   display: block;
-  width: 85%;
+  width: 80%;
   margin: auto;
   padding-top: 10px;
 }
@@ -50,7 +50,7 @@ body {
 .dateSearch {
   position: absolute;
   bottom: 8px;
-  right: 20%;
+  right: 40%;
   margin: auto;
   font-size: 18px;
   background-color: white;
@@ -61,4 +61,66 @@ body {
 
 .dateSearch li a {
   padding: 5px;
+}
+
+/* Categories/ Topics section */
+#topic {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.topics {
+  background-color: bisque;
+  padding: 20px;
+  border: 2px solid teal;
+  border-radius: 20px;
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  max-width: 25%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/* Calendar and Events Section */
+#calendarAndEvents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  background-color: grey;
+  border-radius: 20px;
+}
+
+#calendar {
+  border: 2px solid teal;
+  min-width: 68%;
+  margin: 5px;
+  padding: 10px;
+  background-color: 255,255,255,0.25;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#year, #month {
+  width: 100%;
+}
+
+.weekDays, .dates {
+  max-width: 10%;
+  border-radius: 40%;
+  background-color: white;
+  padding: 3px;
+}
+
+#events {
+  border: 2px solid teal;
+  min-width: 20%;
+  margin: 5px;
+  padding: 10px;
 }
