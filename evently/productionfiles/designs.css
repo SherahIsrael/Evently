@@ -3,11 +3,19 @@ body {
   color: black;
 }
 
+ul {
+  list-style-type: none;
+}
+
+.landing, #topic, #calendarAndEvents {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 /* Landing Page */
 
 /* NavBar */
 #NavBar ul, .dateSearch ul {
-  list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -90,37 +98,121 @@ body {
   justify-content: center;
   width: 80%;
   margin: auto;
-  background-color: grey;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: rgb(194, 194, 194);
   border-radius: 20px;
 }
 
 #calendar {
   border: 2px solid teal;
-  min-width: 68%;
+  min-width: 65%;
+  height: 95%;
   margin: 5px;
   padding: 10px;
   background-color: 255,255,255,0.25;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-around; */
 }
 
-#year, #month {
+#year, #month, .eventHeading {
   width: 100%;
 }
 
+/* 
 .weekDays, .dates {
   max-width: 10%;
   border-radius: 40%;
   background-color: white;
   padding: 3px;
 }
+*/
 
+/* Month */
+#year, #month, .eventHeading {
+  padding: 20px 15px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Month list */
+#month ul {
+  margin: 0;
+  padding: 0;
+}
+
+#month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Previous button inside month header */
+#month .prevMonth {
+  float: left;
+  padding-top: 10px;
+}
+
+/* Next button */
+#month .nextMonth {
+  float: right;
+  padding-top: 10px;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays ul {
+  margin: 0;
+  padding: 10px 0;
+}
+
+.weekdays ul li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+  background-color:#ddd;
+  border-radius: 40%;
+}
+
+/* Days (1-31) */
+.dates ul {
+  padding: 10px 0;
+
+  margin: 0;
+}
+
+.dates ul li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;  
+  background: #eee;
+  border-radius: 40%;
+}
+
+/* Highlight the "current" day */
+.dates ul li .activeDate {
+  padding: 5px;
+  background: #1abc9c;
+  color: rgba(128, 128, 128, 0.5) !important
+}
+
+/* Events Display */
 #events {
   border: 2px solid teal;
-  min-width: 20%;
+  min-width: 25%;
   margin: 5px;
   padding: 10px;
-}
+  min-height: 95%;
+  background-color: 255,255,255,0.25;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+} 
+
