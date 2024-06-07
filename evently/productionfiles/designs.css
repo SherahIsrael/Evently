@@ -216,3 +216,34 @@ ul {
   backdrop-filter: blur(10px);
 } 
 
+
+
+
+
+
+table {
+  border-collapse: collapse;
+}
+
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.calendar-table th, .calendar-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+.event-day {
+  position: relative;
+}
+.event-dot {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+}
