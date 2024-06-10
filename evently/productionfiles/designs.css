@@ -1,5 +1,5 @@
 body {
-  background-color: white;
+  background-color: rgb(230, 230, 230);
   color: black;
 }
 
@@ -80,7 +80,7 @@ ul {
 
 .topics {
   background-color: bisque;
-  padding: 20px;
+  padding: 5%;
   border: 2px solid teal;
   border-radius: 20px;
   display: flexbox;
@@ -89,6 +89,10 @@ ul {
   max-width: 25%;
   margin-left: 10%;
   margin-right: 10%;
+  border-radius: 50%;
+  background: #e0e0e0;
+  box-shadow: inset 23px 23px 46px #bebebe,
+            inset -23px -23px 46px #ffffff;
 }
 
 /* Calendar and Events Section */
@@ -100,8 +104,13 @@ ul {
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
-  background-color: rgb(194, 194, 194);
+  background-color: rgb(199, 193, 193);
   border-radius: 20px;
+  text-align: center;
+  border-radius: 52px;
+  background: #e0e0e0;
+  box-shadow:  23px 23px 46px #bebebe,
+             -23px -23px 46px #ffffff;
 }
 
 #calendar {
@@ -113,23 +122,11 @@ ul {
   background-color: 255,255,255,0.25;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around; */
 }
 
 #year, #month, .eventHeading {
   width: 100%;
 }
-
-/* 
-.weekDays, .dates {
-  max-width: 10%;
-  border-radius: 40%;
-  background-color: white;
-  padding: 3px;
-}
-*/
 
 /* Month */
 #year, #month, .eventHeading {
@@ -138,70 +135,46 @@ ul {
   text-align: center;
 }
 
-/* Month list */
-#month ul {
-  margin: 0;
-  padding: 0;
-}
-
-#month ul li {
-  color: white;
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
 /* Previous button inside month header */
-#month .prevMonth {
+#prevMonth {
   float: left;
   padding-top: 10px;
 }
 
+table {
+  border-collapse: collapse;
+}
+
+.calendarTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+.calendarTable th, .calendarTable td {
+  padding: 10px;
+  text-align: center;
+  background-color: white;
+  border-radius: 40%;
+}
+
+.eventDay {
+  position: relative;
+}
+
+.eventDot {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+}
+
 /* Next button */
-#month .nextMonth {
+#nextMonth {
   float: right;
   padding-top: 10px;
-}
-
-/* Weekdays (Mon-Sun) */
-.weekdays ul {
-  margin: 0;
-  padding: 10px 0;
-}
-
-.weekdays ul li {
-  display: inline-block;
-  width: 13.6%;
-  color: #666;
-  text-align: center;
-  background-color:#ddd;
-  border-radius: 40%;
-}
-
-/* Days (1-31) */
-.dates ul {
-  padding: 10px 0;
-
-  margin: 0;
-}
-
-.dates ul li {
-  list-style-type: none;
-  display: inline-block;
-  width: 13.6%;
-  text-align: center;
-  margin-bottom: 5px;
-  font-size:12px;
-  color: #777;  
-  background: #eee;
-  border-radius: 40%;
-}
-
-/* Highlight the "current" day */
-.dates ul li .activeDate {
-  padding: 5px;
-  background: #1abc9c;
-  color: rgba(128, 128, 128, 0.5) !important
 }
 
 /* Events Display */
@@ -221,29 +194,4 @@ ul {
 
 
 
-table {
-  border-collapse: collapse;
-}
 
-.calendar-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-.calendar-table th, .calendar-table td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: center;
-}
-.event-day {
-  position: relative;
-}
-.event-dot {
-  position: absolute;
-  bottom: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 10px;
-  height: 10px;
-  background-color: red;
-  border-radius: 50%;
-}

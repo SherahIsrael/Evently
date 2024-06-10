@@ -23,12 +23,12 @@
   <h1>Find your next unforgettable memory</h1>
 
   <div id="topic">
-    <h3 class="topics">Cooking</h3>
-    <h3 class="topics">Fitness</h3>
-    <h3 class="topics">Outdoors</h3>
-    <h3 class="topics">Tech</h3>
-    <h3 class="topics">Entertainment</h3>
-    <h3 class="topics">Business</h3>
+    <h4 class="topics">Cooking</h4>
+    <h4 class="topics">Fitness</h4>
+    <h4 class="topics">Outdoors</h4>
+    <h4 class="topics">Tech</h4>
+    <h4 class="topics">Entertainment</h4>
+    <h4 class="topics">Business</h4>
   </div>
 
   <div id="calendarAndEvents">
@@ -36,12 +36,12 @@
       <div id="currentYear"></div>
       <div id="month">
         <ul>
-          <li class="prevMonth">&#10094;</li>
-          <li class="nextMonth">&#10095;</li>
+          <li class="arrow" id="prevMonth">&#10094;</li>
           <li><span id="currentMonth"></span></li>
+          <li class="arrow" id="nextMonth">&#10095;</li>
         </ul>
-      </div>
-      <table class="calendar-table" id="calendar-table">
+      </div> 
+      <table class="calendarTable" id="calendarTable">
         <thead>
             <tr>
                 <th>Mon</th>
@@ -53,10 +53,10 @@
                 <th>Sun</th>
             </tr>
         </thead>
-        <tbody id="calendar-body">
+        <tbody id="calendarBody">
             <!-- Calendar will be dynamically generated here -->
         </tbody>
-      </table>
+      </table> 
     </div>
     <div id="events">
       <div class="eventHeading">Events</div>
