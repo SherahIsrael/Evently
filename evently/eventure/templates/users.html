@@ -12,7 +12,7 @@
   
 <ul>
   {% for x in allusers %}
-    <li><a href="details/{{ x.id }}">{{ x.firstName }} {{ x.lastName }} </li>
+    <li><a href="details/{{ x.slug }}">{{ x.firstName }} {{ x.lastName }} </li>
   {% endfor %}
 </ul>
 

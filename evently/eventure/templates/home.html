@@ -8,7 +8,38 @@
 
 
 {% block content %}
-  
+
+  <!-- Sign In Form -->
+  <div id="signInModal" class="modal">
+  <div id="signInForm">
+    <span class="close">&times;</span>
+    <h1>Sign In</h1>
+    <h4>Don't have an account?<span><a>Sign Up</a></span></h4>
+    <form method="post" action="">
+      <label for="email">Email <input id="email" name="email" type="email" required /></label>
+      <label for="password">Password <input id="password" name="password" type="password" pattern="[a-z0-5]{8,}" required /></label>
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+  </div>
+
+  {% comment %} Sign Up Form {% endcomment %}
+  <div id="signUpModal" class="modal">
+    <div id="signUpForm">
+      <span class="close">&times;</span>
+      <h1>Sign Up</h1>
+      <form method="post" action="">
+        <label for="firstName">First Name: <input id="firstName" name="firstName" type="text" required /></label>
+        <label for="lastName">Last Name: <input id="lastName" name="lastName" type="text" /></label>
+        <label for="registerEmail">Enter Your Email: <input id="registerEmail" name="registerEmail" type="email" required /></label>
+        <label for="dateOfBirth">Enter Your Date Of Birth: <input id="dateOfBirth" name="dateOfBirth" type="date" /></label>
+        <label for="createPassword">Create a New Password: <input id="createPassword" name="createPassword" type="password" pattern="[a-z0-5]{8,}" required /></label>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </div>
+
+  {% comment %} Landing Page Section {% endcomment %}
   <div class="landing">
     <img src="{% static 'outdoorEvent.png' %}">
     <div class="dateSearch">
@@ -22,6 +53,7 @@
 
   <h1>Find your next unforgettable memory</h1>
 
+  {% comment %} Topics Section {% endcomment %}
   <div id="topic">
     <h4 class="topics">Cooking</h4>
     <h4 class="topics">Fitness</h4>
@@ -31,6 +63,7 @@
     <h4 class="topics">Business</h4>
   </div>
 
+  {% comment %} Calendar and Events Section {% endcomment %}
   <div id="calendarAndEvents">
     <div id="calendar">
       <div id="currentYear"></div>
@@ -82,5 +115,4 @@
   <p>See a list of our <a href="users/">users</a></p>
 
   <script src="{% static 'calendarCreation.js' %}"></script>
-  
 {% endblock %}

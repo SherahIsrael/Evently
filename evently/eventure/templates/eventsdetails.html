@@ -1,0 +1,17 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Details about {{ allevents.eventName }}
+{% endblock %}
+
+{% block content %}
+<div id="eventDetailsCard">
+    <h1>{{ allevents.eventName }}</h1>
+    <p>Event ID: {{ allevents.id }}</p>
+    <p>Date: {{ allevents.eventDate }}</p>
+    <p>Start Time: {{ allevents.startTime }}</p>
+    <p>End Time: {{ allevents.endTime }}</p>
+    
+    <p>Back to <a href="/events">Events</a></p>
+</div>
+{% endblock %}

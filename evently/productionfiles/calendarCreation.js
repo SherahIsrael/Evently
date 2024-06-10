@@ -1,10 +1,14 @@
-document.addEventListener('DOMContentLoaded', function() {
+
+
+
+// Calendar Creation and Update
+document.addEventListener("DOMContentLoaded", function() {
     const today = new Date();
     let currentYear = today.getFullYear();
     let currentMonth = today.getMonth();
 
     function updateCalendar(year, month) {
-        const monthName = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(new Date(year, month));
+        const monthName = new Intl.DateTimeFormat("en-US", { month: 'long' }).format(new Date(year, month));
         document.getElementById('currentMonth').textContent = monthName;
         document.getElementById('currentYear').textContent = year;
 
@@ -84,4 +88,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     updateCalendar(currentYear, currentMonth);
+
+    // Sign In Modal 
+    document.getElementById("signInBtn").addEventListener("click", function() {
+        signInModal.style.display = "block";
+    })
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      signInModal.style.display = "none";
+    }
 });

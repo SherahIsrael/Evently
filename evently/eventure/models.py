@@ -8,6 +8,7 @@ class usersTable(models.Model):
     email = models.EmailField(max_length=150, null=False)
     dateOfBirth = models.DateField()
     registrationDate = models.DateField()
+    slug = models.SlugField(default="", null=False)
 
     def __str__(self):
         return f"{self.firstName} {self.lastName}"

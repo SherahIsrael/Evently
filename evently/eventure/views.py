@@ -22,6 +22,15 @@ def events(request):
     return HttpResponse(template.render(context, request))
 
 
+def eventsDetails(request, id):
+    allevents = eventsTable.objects.get(id=id)
+    template = loader.get_template('eventsdetails.html')
+    context = {
+        'allevents': allevents,
+    }
+    return HttpResponse(template.render(context, request))
+
+
 def users(request):
     allusers = usersTable.objects.all().values()
     template = loader.get_template('users.html')
@@ -31,8 +40,8 @@ def users(request):
     return HttpResponse(template.render(context, request))
 
 
-def details(request, id):
-    allusers = usersTable.objects.get(id=id)
+def usersDetails(request, slug):
+    allusers = usersTable.objects.get(slug=slug)
     template = loader.get_template('usersdetails.html')
     context = {
         'allusers': allusers,
