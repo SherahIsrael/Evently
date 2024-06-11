@@ -21,6 +21,6 @@ class testUrls(SimpleTestCase):
         self.assertEqual(resolve(url).func, users)
 
     def testDetailsUrlIsResolved(self):
-        url = reverse('eventDetails', args=['user-slug'])
+        url = reverse("userDetails", args=["user-slug"])
         print(resolve(url))
         self.assertEqual(resolve(url).func, usersDetails)

@@ -1,6 +1,7 @@
 body {
   background-color: rgb(230, 230, 230);
   color: black;
+  text-align: center;
 }
 
 ul {
@@ -87,7 +88,7 @@ ul {
   display: block;
   width: 80%;
   margin: auto;
-  padding-top: 10px;
+  border-radius: 20px;
 }
 
 .dateSearch {
@@ -104,6 +105,10 @@ ul {
 
 .dateSearch li a {
   padding: 5px;
+}
+
+#slogan {
+  padding: 10px;
 }
 
 /* Categories/ Topics section */
@@ -146,21 +151,28 @@ ul {
   background: #e0e0e0;
   box-shadow:  23px 23px 46px #bebebe,
              -23px -23px 46px #ffffff;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 #calendar {
   border: 2px solid teal;
-  min-width: 65%;
+  min-width: 60%;
+  max-width: 65%;
   height: 95%;
   margin: 5px;
   padding: 10px;
-  background-color: 255,255,255,0.25;
+  background-color: rgba(255,255,255,0.25);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
 #year, #month, .eventHeading {
   width: 100%;
+}
+
+.arrow {
+  cursor: pointer;
 }
 
 /* Month */
@@ -180,6 +192,10 @@ table {
   border-collapse: collapse;
 }
 
+#calendarOverflow {
+  overflow-x: auto;
+}
+
 .calendarTable {
   width: 100%;
   border-collapse: collapse;
@@ -188,7 +204,10 @@ table {
   padding: 10px;
   text-align: center;
   background-color: white;
-  border-radius: 40%;
+  background-size: contain;
+  border-radius: 50%;
+  width: 12%;
+  height: 12%;
 }
 
 .eventDay {
@@ -197,13 +216,20 @@ table {
 
 .eventDot {
   position: absolute;
-  bottom: 5px;
-  left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(50%);
   width: 10px;
   height: 10px;
   background-color: red;
   border-radius: 50%;
+}
+
+.dayHover:hover {
+  background-color: black;
+  color: white;
+}
+
+.otherMonth {
+  color: rgba(0,0,0,0.3);
 }
 
 /* Next button */
@@ -219,7 +245,7 @@ table {
   margin: 5px;
   padding: 10px;
   min-height: 95%;
-  background-color: 255,255,255,0.25;
+  background-color: rgba(255,255,255,0.25);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 } 

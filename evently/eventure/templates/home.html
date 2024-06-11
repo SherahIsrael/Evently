@@ -50,8 +50,9 @@
       </ul>
     </div>
   </div>
-
-  <h1>Find your next unforgettable memory</h1>
+  <div id="slogan">
+    <h1>Find your next unforgettable memory</h1>
+  </div>
 
   {% comment %} Topics Section {% endcomment %}
   <div id="topic">
@@ -74,27 +75,30 @@
           <li class="arrow" id="nextMonth">&#10095;</li>
         </ul>
       </div> 
-      <table class="calendarTable" id="calendarTable">
-        <thead>
-            <tr>
-                <th>Mon</th>
-                <th>Tue</th>
-                <th>Wed</th>
-                <th>Thu</th>
-                <th>Fri</th>
-                <th>Sat</th>
-                <th>Sun</th>
-            </tr>
-        </thead>
-        <tbody id="calendarBody">
-            <!-- Calendar will be dynamically generated here -->
-        </tbody>
-      </table> 
+      <div id="calendarOverflow">
+        <table class="calendarTable" id="calendarTable">
+          <thead>
+              <tr>
+                  <th>Mon</th>
+                  <th>Tue</th>
+                  <th>Wed</th>
+                  <th>Thu</th>
+                  <th>Fri</th>
+                  <th>Sat</th>
+                  <th>Sun</th>
+              </tr>
+          </thead>
+          <tbody id="calendarBody">
+              <!-- Calendar will be dynamically generated here -->
+          </tbody>
+        </table> 
+      </div>
     </div>
     <div id="events">
       <div class="eventHeading">Events</div>
-      <div class="event">
-        <ul>
+      <div class="eventDay"></div>
+      <div> 
+        <ul id="eventList">
           <li></li>
           <li></li>
           <li></li>
