@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, AbstractUser
 
 
 class usersTable(models.Model):
@@ -28,3 +28,10 @@ class eventsTable(models.Model):
 # class registrationTable(models.Model):
 #   event = models.ForeignKey(eventsTable, blank=True, on_delete=models.CASCADE)
 #   user = models.ManyToManyField(usersTable, blank=True, on_delete=models.CASCADE)
+
+class CustomUser(AbstractUser):
+    pass
+    # add additional fields in here
+
+    def __str__(self):
+        return self.username
