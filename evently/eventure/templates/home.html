@@ -10,7 +10,7 @@
 {% block content %}
 
   <!-- Sign In Form -->
-  <div id="signInModal" class="modal">
+  {% comment %} <div id="signInModal" class="modal">
   <div id="signInForm">
     <span class="close">&times;</span>
     <h1>Sign In</h1>
@@ -21,10 +21,10 @@
       <input type="submit" value="Submit" />
     </form>
   </div>
-  </div>
+  </div> {% endcomment %}
 
   {% comment %} Sign Up Form {% endcomment %}
-  <div id="signUpModal" class="modal">
+  {% comment %} <div id="signUpModal" class="modal">
     <div id="signUpForm">
       <span class="close">&times;</span>
       <h1>Sign Up</h1>
@@ -37,7 +37,7 @@
         <input type="submit" value="Submit" />
       </form>
     </div>
-  </div>
+  </div> {% endcomment %}
 
   {% comment %} Landing Page Section {% endcomment %}
   <div class="landing">

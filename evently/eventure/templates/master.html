@@ -14,10 +14,20 @@
 <body>
   <div id="NavBar">
     <ul>
-      <li><a href="#home">Logo</a></li>
-      <li><a href="#home">Evently</a></li>
-      <li style="float:right"><a href="#contact">Sign Up</a></li>
-      <li style="float:right"><a class="active" id="signInBtn" href="#about">Sign In</a></li>
+      <li><a href="/">Logo</a></li>
+      <li><a href="/">Evently</a></li>
+      {% if user.is_authenticated %}
+        <li style="float:right">
+          <form method="post" action="{% url 'logout' %}" style="display:inline;">
+            {% csrf_token %}
+            <button type="submit" class="logoutBtn">Log Out</button>
+          </form>
+        </li>
+        <li style="float:right">{{ request.user.username }}</li>
+      {% else %}
+      <li style="float:right"><a href="{% url 'signUp' %}">Sign Up</a></li>
+      <li style="float:right"><a class="active" id="signInBtn" href="{% url 'login' %}">Sign In</a></li>
+      {% endif %}
     </ul>
   </div>
 

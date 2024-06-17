@@ -37,6 +37,15 @@ ul {
   text-transform: uppercase;
 }
 
+.logoutBtn {
+  background-color: teal;
+  cursor: pointer;
+}
+
+.logoutBtn:hover {
+  background-color: #888;
+}
+
 /* Sign In Section */
 #signInModal, #signUpModal {
   display: none; 
