@@ -24,7 +24,7 @@ ul {
   float: left;
 }
 
-#NavBar li a {
+#NavBar li a, .logoutBtn {
   display: block;
   text-align: center;
   padding: 14px 16px;
@@ -38,12 +38,7 @@ ul {
 }
 
 .logoutBtn {
-  background-color: teal;
-  cursor: pointer;
-}
-
-.logoutBtn:hover {
-  background-color: #888;
+  border: none;
 }
 
 /* Sign In Section */

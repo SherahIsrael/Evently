@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.http import JsonResponse
 from django.template import loader
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import login, authenticate
 
 from .models import usersTable
@@ -42,8 +42,12 @@ def users(request):
     return HttpResponse(template.render(context, request))
 
 
-def usersDetails(request, slug):
-    allusers = usersTable.objects.get(slug=slug)
+def usersDetails(request, identifier):
+    try:
+        allusers = usersTable.objects.get(slug=identifier)
+    except usersTable.DoesNotExist:
+        allusers = get_object_or_404(usersTable, id=identifier)
+    
     template = loader.get_template("usersdetails.html")
     context = {
         "allusers": allusers,

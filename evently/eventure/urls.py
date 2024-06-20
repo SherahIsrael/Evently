@@ -9,7 +9,7 @@ urlpatterns = [
     path("events/", views.events, name='events'),
     path("events/details/<int:id>", views.eventsDetails, name="eventDetails"),
     path("users/", views.users, name="users"),
-    path("users/details/<slug:slug>", views.usersDetails, name="userDetails"),
+    path("users/details/<str:identifier>/", views.usersDetails, name="userDetails"),
     path("signup/", views.signUp, name="signUp"),
     path("accounts/logout/", LogoutView.as_view(next_page="home"), name="logout"),
     path("accounts/login/", views.loginView, name="login"),

@@ -12,7 +12,11 @@
   
 <ul>
   {% for x in allusers %}
-    <li><a href="details/{{ x.slug }}">{{ x.firstName }} {{ x.lastName }} </li>
+    <li>
+      <a href="{% if x.slug %}details/{{ x.slug }}{% else %}details/{{ x.id }}{% endif %}">
+          {{ x.firstName }} {{ x.lastName }}
+      </a>
+    </li>
   {% endfor %}
 </ul>
 
